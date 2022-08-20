@@ -4,8 +4,5 @@ const array = [
   { name: "Bogdan", age: "20" },
   { name: "Vlad", age: "20" },
 ];
-const resArray = [];
-array.forEach((element) => {
-  resArray.push(`Name: ${element.name}, Age: ${element.age}`);
-});
+const resArray = array.map(({ name, age }) => `Name: ${name}, Age: ${age}`);
 console.log(resArray);

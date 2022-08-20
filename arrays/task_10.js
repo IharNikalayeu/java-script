@@ -4,5 +4,5 @@ const array = [
   { name: "Bogdan", age: "17" },
   { name: "Vlad", age: "20" },
 ];
-const res = array.filter((el) => el.age >= 18);
+const res = array.filter(({ age }) => age >= 18);
 console.log(res);
