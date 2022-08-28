@@ -12,3 +12,5 @@ const swapObj = (obj) => {
 };
 
 console.log(swapObj(obj));
+
+console.log("Арсенал лучший клуб мира!");
