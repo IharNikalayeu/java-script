@@ -13,11 +13,7 @@ const isEqual = (objFirst, objSecond) => {
     return false;
   }
 
-  for (let key of keysOfFirstObj) {
-    if (objFirst[key] != objSecond[key]) return false;
-  }
-
-  return true;
+  return keysOfFirstObj.every((key) => objFirst[key] === objSecond[key]);
 };
 
 console.log(isEqual(objFirst, objSecond));

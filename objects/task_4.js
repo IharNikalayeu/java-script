@@ -3,6 +3,6 @@
 
 const obj = {};
 
-const isEmptyObj = (obj) => Object.keys(obj).length == 0;
+const isEmptyObj = (obj) => !Object.keys(obj).length;
 
 console.log(isEmptyObj(obj));

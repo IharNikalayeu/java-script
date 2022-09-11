@@ -4,13 +4,9 @@
 const obj = { a: 1, b: 2 };
 
 const swapObj = (obj) => {
-  const newObj = {};
-  for (let [key, value] of Object.entries(obj)) {
-    newObj[value] = key;
-  }
-  return newObj;
+  return Object.fromEntries(
+    Object.entries(obj).map(([key, value]) => [value, key])
+  );
 };
 
 console.log(swapObj(obj));
-
-console.log("Арсенал лучший клуб мира!");

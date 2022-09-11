@@ -6,9 +6,10 @@ const delKey = "b";
 
 const getNewObj = (obj, ...delKey) => {
   const newObj = { ...obj };
-  for (let item of delKey) {
+  newObj.forEach((item) => {
     delete newObj[item];
-  }
+  });
+
   return newObj;
 };
 
