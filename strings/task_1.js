@@ -2,9 +2,7 @@
 
 const text = "arsenal is the best football club in the world";
 
-const upperFirstLetter = (text) => {
-  if (!text) return text;
-  return text[0].toUpperCase() + text.slice(1);
-};
+const upperFirstLetter = (text) =>
+  !text ? text : text[0].toUpperCase() + text.slice(1);
 
 console.log(upperFirstLetter(text));
