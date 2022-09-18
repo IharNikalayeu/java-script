@@ -2,8 +2,6 @@
 
 const currentDate = new Date();
 
-console.log(currentDate);
-
 const dateFormat = (currentDate) =>
   ("0" + currentDate.getDate()).slice(-2) +
   "." +
