@@ -8,8 +8,8 @@ fetch("https://jsonplaceholder.typicode.com/users/")
   });
 
 async function getUserName() {
-  let promise = await fetch("https://jsonplaceholder.typicode.com/users/");
-  let data = await promise.json();
+  const promise = await fetch("https://jsonplaceholder.typicode.com/users/");
+  const data = await promise.json();
 
   data.map(({ name }) => console.log(name));
 }

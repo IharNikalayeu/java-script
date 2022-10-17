@@ -12,15 +12,14 @@ async function getGroupUser() {
   obj = {};
 
   users.map(({ username, company }) => {
-    if (obj.hasOwnProperty(company.name)) obj[company.name].push(username);
-    else {
-      obj[company.name] = [username];
-    }
+    obj[company.name] === undefined
+      ? (obj[company.name] = [username])
+      : obj[company.name].push(username);
   });
 
-  for (const [key, value] of Object.entries(obj)) {
+  for (key in obj) {
     console.log(key + ":");
-    value.map((username) => console.log(username));
+    obj[key].map((username) => console.log(username));
   }
 }
 
