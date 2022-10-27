@@ -6,7 +6,7 @@ async function showUsersInfo() {
 
   data
     .filter(({ phone }) => phone.startsWith("1"))
-    .map(({ name, username, email, phone }) => {
+    .forEach(({ name, username, email, phone }) => {
       console.log(
         `Name: ${name}, username: ${username}, email: ${email}, phone: ${phone}`
       );

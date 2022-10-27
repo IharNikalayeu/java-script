@@ -12,15 +12,15 @@ async function getGroupUser() {
   obj = {};
 
   users.map(({ username, company }) => {
-    obj[company.name] === undefined
-      ? (obj[company.name] = [username])
-      : obj[company.name].push(username);
+    obj[company.name]
+      ? obj[company.name].push(username)
+      : (obj[company.name] = [username]);
   });
 
-  for (key in obj) {
-    console.log(key + ":");
-    obj[key].map((username) => console.log(username));
-  }
+  Object.entries(obj).forEach(([name, usernames]) => {
+    console.log(name);
+    usernames.forEach((username) => console.log(username));
+  });
 }
 
 getGroupUser();

@@ -11,7 +11,7 @@ async function showUsersInfo() {
       `Address: ${city}, ${street}, ${suite} (geo: ${geo.lat}; ${geo.lng})`
     );
 
-  data.map(({ name, address }) => {
+  data.forEach(({ name, address }) => {
     console.log(`Name: ${name}`);
     showAddress(address);
   });
